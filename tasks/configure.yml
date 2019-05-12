@@ -5,7 +5,7 @@
     dest: "{{ prometheus_config_dir }}/rules/ansible_managed.rules"
     owner: root
     group: prometheus
-    mode: 0640
+    mode: 0644
     validate: "/usr/local/bin/promtool check rules %s"
   when:
     - prometheus_alertmanager_config != []
@@ -19,7 +19,7 @@
     dest: "{{ prometheus_config_dir }}/rules/"
     owner: root
     group: prometheus
-    mode: 0640
+    mode: 0644
     validate: "/usr/local/bin/promtool check rules %s"
   with_fileglob: "{{ prometheus_alert_rules_files }}"
   notify:
@@ -32,7 +32,7 @@
     force: true
     owner: root
     group: prometheus
-    mode: 0640
+    mode: 0644
     validate: "/usr/local/bin/promtool check config %s"
   notify:
     - reload prometheus
@@ -46,7 +46,7 @@
     force: true
     owner: root
     group: prometheus
-    mode: 0640
+    mode: 0644
   with_dict: "{{ prometheus_targets }}"
   when: prometheus_targets != {}
 
@@ -57,5 +57,5 @@
     force: true
     owner: root
     group: prometheus
-    mode: 0640
+    mode: 0644
   with_fileglob: "{{ prometheus_static_targets_files }}"
