@@ -1,0 +1,35 @@
+---
+- hosts: self
+  become: yes
+  become_user: root
+  roles:
+    - role: .
+      prometheus_version: 2.9.2
+      prometheus_config_dir: /etc/prometheus
+      prometheus_db_dir: /var/lib/prometheus
+      prometheus_web_listen_address: "0.0.0.0:9090"
+      prometheus_web_external_url: ''
+
+      prometheus_storage_retention: "15d"
+      prometheus_storage_retention_size: "10GB"
+
+      prometheus_config_flags_extra: {}
+      prometheus_alertmanager_config: []
+      prometheus_alert_relabel_configs: []
+
+      prometheus_global:
+        scrape_interval: 15s
+        scrape_timeout: 10s
+        evaluation_interval: 15s
+
+      prometheus_remote_write: []
+      prometheus_remote_read: []
+
+      prometheus_targets: {}
+      prometheus_scrape_configs:
+        - job_name: "prometheus"
+          static_configs:
+            - targets:
+              - "localhost:9090"
+
+      prometheus_alert_rules: []
