@@ -1,13 +1,49 @@
 # Change Log
 
-## [**Next release**](https://galaxy.ansible.com/cloudalchemy/prometheus)
+## [2.11.0](https://galaxy.ansible.com/cloudalchemy/prometheus) (2019-10-05)
+**Merged pull requests:**
 
+- New prometheus/prometheus upstream release! [\#231](https://github.com/cloudalchemy/ansible-prometheus/pull/231) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- Synchronize files from cloudalchemy/skeleton [\#227](https://github.com/cloudalchemy/ansible-prometheus/pull/227) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- add RHEL8 and debian buster support; remove testing on debian jessie [\#226](https://github.com/cloudalchemy/ansible-prometheus/pull/226) ([paulfantom](https://github.com/paulfantom))
+- Some "false" were incorrectly substituted to "no" [\#225](https://github.com/cloudalchemy/ansible-prometheus/pull/225) ([wzyboy](https://github.com/wzyboy))
+- Update minimum required ansible version [\#224](https://github.com/cloudalchemy/ansible-prometheus/pull/224) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- Moving to python 3 and dropping support for python 2.x \(on deployer host\) [\#223](https://github.com/cloudalchemy/ansible-prometheus/pull/223) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
+## [2.10.0](https://galaxy.ansible.com/cloudalchemy/prometheus) (2019-08-19)
+**Implemented enhancements:**
+
+- Support recording rules without alerts [\#192](https://github.com/cloudalchemy/ansible-prometheus/issues/192)
+
+**Fixed bugs:**
+
+- Prometheus failed to start on Ubuntu 18.04: LimitNOFILE: Operation not permitted [\#190](https://github.com/cloudalchemy/ansible-prometheus/issues/190)
+
+**Merged pull requests:**
+
+- New prometheus/prometheus upstream release! [\#221](https://github.com/cloudalchemy/ansible-prometheus/pull/221) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- Synchronize files from cloudalchemy/skeleton [\#220](https://github.com/cloudalchemy/ansible-prometheus/pull/220) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- Allow specifying recording rules without alerting configuration [\#212](https://github.com/cloudalchemy/ansible-prometheus/pull/212) ([paulfantom](https://github.com/paulfantom))
+
+## [2.9.3](https://galaxy.ansible.com/cloudalchemy/prometheus) (2019-08-14)
+**Merged pull requests:**
+
+- New prometheus/prometheus upstream release! [\#219](https://github.com/cloudalchemy/ansible-prometheus/pull/219) ([cloudalchemybot](https://github.com/cloudalchemybot))
+- New prometheus/prometheus upstream release! [\#217](https://github.com/cloudalchemy/ansible-prometheus/pull/217) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
+## [2.9.2](https://galaxy.ansible.com/cloudalchemy/prometheus) (2019-07-11)
+**Merged pull requests:**
+
+- New prometheus/prometheus upstream release! [\#216](https://github.com/cloudalchemy/ansible-prometheus/pull/216) ([cloudalchemybot](https://github.com/cloudalchemybot))
+
+## [2.9.1](https://galaxy.ansible.com/cloudalchemy/prometheus) (2019-05-27)
 **Closed issues:**
 
 - prometheus\_alert\_rules\_files link is broken [\#207](https://github.com/cloudalchemy/ansible-prometheus/issues/207)
 
 **Merged pull requests:**
 
+- New prometheus/prometheus upstream release! [\#209](https://github.com/cloudalchemy/ansible-prometheus/pull/209) ([cloudalchemybot](https://github.com/cloudalchemybot))
 - add watchdog and clock skew alerts [\#206](https://github.com/cloudalchemy/ansible-prometheus/pull/206) ([paulfantom](https://github.com/paulfantom))
 
 ## [2.9.0](https://galaxy.ansible.com/cloudalchemy/prometheus) (2019-05-04)

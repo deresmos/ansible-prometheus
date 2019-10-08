@@ -6,18 +6,20 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: stretch
-    image: paulfantom/debian-molecule:9
+  - name: buster
+    image: paulfantom/debian-molecule:10
     docker_host: "${DOCKER_HOST:-unix://var/run/docker.sock}"
     privileged: true
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
   - name: fedora
-    image: paulfantom/fedora-molecule:27
+    image: paulfantom/fedora-molecule:30
     docker_host: "${DOCKER_HOST:-unix://var/run/docker.sock}"
     privileged: true
     volumes:
       - /sys/fs/cgroup:/sys/fs/cgroup:ro
+    groups:
+      - python3
 provisioner:
   name: ansible
   lint:
@@ -27,6 +29,10 @@ provisioner:
     prepare: ../default/prepare.yml
     converge: playbook.yml
     destroy: ../default/destroy.yml
+  inventory:
+    group_vars:
+      python3:
+        ansible_python_interpreter: /usr/bin/python3
 scenario:
   name: latest
 verifier:
